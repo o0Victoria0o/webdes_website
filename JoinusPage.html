@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="ProjectD.css">
+        <title>Join Us</title>
+    </head>
+
+    <body>
+    <header>
+        <div class = "header.container">
+            <div class = "header.logo">
+                <img src="https://projectdlv.com/cdn/shop/files/Transparent_Logo_4b32a657-edc1-4eaa-8bf2-3cd6b6f231f1.png?v=1695078210&width=600" alt="Logo">
+            </div>
+
+            <div class = "navigation-buttons">
+                <button class = "nav-button" onclick="location.href='index.html'">Home</button>
+                <button class = "nav-button" onclick="location.href='DriversPage.html'">Drivers</button>
+                <button class = "nav-button" onclick="location.href='TracksPage.html'">Tracks</button>
+                <button class = "nav-button" onclick="location.href='JoinusPage.html'">Join Us</button>
+                <button class = "nav-button" onclick="location.href='AboutusPage.html'">About Us</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class = "driver-candidate-form">
+            <h1>Join Our Racing Team!</h1>
+            <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="position">Position:</label>
+                <select id="position" name="position" required>
+                    <option value="" disabled selected>Select a position</option>
+                    <option value="downhill-trainee">Downhill Trainee</option>
+                    <option value="uphill-trainee">Uphill Trainee</option>
+                    <option value="auto-technician">Auto Technician</option>
+                    <option value="track-scout">Track Scout</option>
+                </select><br><br>
+
+                <input type="submit" value="Submit">
+
+                <label for="portfolio">Portfolio (optional):</label>
+                <input type="file" id="portfolio" name="portfolio"><br><br>
+
+            </form>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class = "footer-container">
+            <p>&copy; 2024 Ultimate Racing Experience. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="ProjectD.js"></script>
+    </body>
+
+
+
+</html>

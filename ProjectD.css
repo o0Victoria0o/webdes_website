@@ -1,0 +1,350 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    background-image: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), 
+                      url("https://ih1.redbubble.net/image.2011355752.8996/flat,750x,075,f-pad,750x1000,f8f8f8.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #111111;
+    border-bottom: 3px solid #ff3333;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header\.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header\.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-button {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 2px solid transparent;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-button:hover {
+    background-color: #ff3333;
+    color: #ffffff;
+    border-color: #ff6666;
+    box-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+}
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main-container-box {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+.gif-containers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
+}
+
+.gif-containers img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 1px solid #222222;
+}
+
+.gif-containers img:hover {
+    transform: scale(1.02);
+    border-color: #ff3333;
+}
+
+@media (max-width: 768px) {
+    .gif-containers {
+        grid-template-columns: 1fr;
+    }
+}
+
+.main-head-text {
+    text-align: center;
+    background: rgba(17, 17, 17, 0.9);
+    padding: 50px 30px;
+    border-radius: 8px;
+    border-bottom: 4px solid #ff3333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
+
+.main-head-text h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.main-head-text p {
+    font-size: 1.25rem;
+    color: #ff3333;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.main-page-text {
+    text-align: center;
+    background: rgba(17, 17, 17, 0.85);
+    padding: 40px;
+    border-radius: 8px;
+    border-left: 5px solid #ff3333;
+}
+
+.main-page-text h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-page-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.drivers-section, .Tracks-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.driver-card, .track-card {
+    background-color: #222222;
+    border: 1px solid #333333;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+}
+
+.driver-card ul, .track-card ul {
+    text-align: left;
+    display: inline-block;
+    margin: 15px auto 0 auto;
+    padding-left: 10px;
+}
+
+.driver-card li, .track-card li {
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 0.8;
+    margin-bottom: 5px;
+}
+
+.driver-card:hover, .track-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 51, 51, 0.2);
+    border-color: #ff3333;
+}
+
+.driver-card img, .track-card img {
+    width: 100%;
+    height: 350px;         /* Keeps the image area uniform across all cards */
+    background-color: #111111; /* Adds a dark background to fill any empty space */
+    object-fit: contain;   /* Forces the full image to fit inside without stretching or cropping */
+    border-bottom: 3px solid #ff3333;
+}
+
+.driver-card h2, .track-card h2 {
+    color: #ffffff;
+    margin: 15px 0 10px 0;
+    font-size: 2rem;
+}
+
+.driver-card p, .track-card p {
+    color: #aaaaaa;
+    padding: 0 15px;
+    font-size: 1rem;
+}
+
+
+.about-project-d, .mission-vision, .racing-background {
+    background-color: #222222;
+    padding: 25px;
+    border-radius: 8px;
+    border-right: 4px solid #ff3333;
+    margin-bottom: 20px;
+}
+
+.about-project-d h2, .mission-vision h2, .racing-background h2 {
+    color: #ff3333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.about-project-d p, .mission-vision p, .racing-background p {
+    line-height: 1.6;
+    color: #dddddd;
+}
+
+.driver-candidate-form {
+    background-color: #222222;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    border-top: 4px solid #ff3333;
+}
+
+.driver-candidate-form h1 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.driver-candidate-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #cccccc;
+}
+
+.driver-candidate-form input[type="text"],
+.driver-candidate-form input[type="email"],
+.driver-candidate-form select,
+.driver-candidate-form textarea,
+.driver-candidate-form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a1a1a;
+    border: 1px solid #444444;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.driver-candidate-form input[type="text"]:focus,
+.driver-candidate-form input[type="email"]:focus,
+.driver-candidate-form select:focus,
+.driver-candidate-form textarea:focus,
+.driver-candidate-form input[type="file"]:focus {
+    outline: none;
+    border-color: #ff3333;
+    box-shadow: 0 0 8px rgba(255, 51, 51, 0.3);
+}
+
+.driver-candidate-form select option {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.driver-candidate-form input[type="file"]::file-selector-button {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.driver-candidate-form input[type="file"]::file-selector-button:hover {
+    background-color: #ff3333;
+    border-color: #ff6666;
+}
+
+.driver-candidate-form input[type="submit"] {
+    background-color: #ff3333;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    margin-top: 25px;
+    margin-bottom: 0px;
+}
+
+.driver-candidate-form input[type="submit"]:hover {
+    background-color: #cc2222;
+}
+
+footer {
+    background-color: #111111;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #222222;
+    margin-top: auto;
+}
+
+.footer-container p {
+    color: #666666;
+    font-size: 0.9rem;
+}
